@@ -18,6 +18,7 @@
     
 }
 
+// order doesnt matter in confined methods
 -(BOOL)canProcessPayment{
 
  int number = arc4random_uniform(2);
@@ -25,6 +26,8 @@
     if(number == 1){
         return YES;
     } else{
+        //if take out else statement in payment gateway this nslog will pop up...
+        NSLog(@"PAYPAL DOESNT ACCEPT");
         return NO;
     
     }
